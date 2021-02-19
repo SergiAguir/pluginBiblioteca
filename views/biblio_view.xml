@@ -1,0 +1,43 @@
+<odoo>
+  <data>
+    
+    <record id="biblio_model_form_inherit" model="ir.ui.view">
+
+      <field name="name"> Plugin de biblioteca</field>
+
+      <field name="model">biblioteca.persona_model</field>
+
+      <field name="inherit_id" ref="biblioteca.listado_persona_form"/>
+
+      <field name="arch" type="xml">
+
+        <field name="localidad" position="after">
+          <field name="provincia" />
+        </field>
+
+      </field>
+
+    </record>
+
+    <record id="biblio_model_tree_inherit" model="ir.ui.view">
+
+      <field name="name"> Plugin de biblioteca</field>
+
+      <field name="model">biblioteca.persona_model</field>
+
+      <field name="inherit_id" ref="biblioteca.listado_persona_tree"/>
+
+      <field name="arch" type="xml">
+
+        <field name="localidad" position="after">
+
+          <field name="provincia" />
+
+        </field>
+
+      </field>
+
+    </record>
+
+  </data>
+</odoo>
